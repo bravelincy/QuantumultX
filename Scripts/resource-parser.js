@@ -469,7 +469,7 @@ function ResourceParse() {
       Prn = Prrname;
       total = total.map(Rename);
     }
-    //if (Pemoji) { total = emoji_handle(total, Pemoji); }
+    if (Pemoji) { total = emoji_handle(total, Pemoji); }
     if (Pregdel) {
       delreg = Pregdel
       total = total.map(DelReg)
@@ -485,7 +485,7 @@ function ResourceParse() {
       if(Pdbg==1) {$notify("rename","content",total)}
     }
     //2023-07-10 调整emoji操作顺序
-    if (Pemoji) { total = emoji_handle(total, Pemoji); }
+    // if (Pemoji) { total = emoji_handle(total, Pemoji); }
     if (total.length > 0){
       if (Psuffix==1 || Psuffix==-1) {total = Psuffix == 1? total.map(type_suffix):total.map(type_prefix)
       }
